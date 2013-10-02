@@ -39,7 +39,7 @@ public class PrintPrimes {
       int ORD = 2;
       int SQUARE = 9;
 
-      for(int primesFoundSoFar = 1; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
+      for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           currentNumber = currentNumber + 2;
           if (currentNumber == SQUARE) {
@@ -59,6 +59,11 @@ public class PrintPrimes {
         } while (!currentNumPrime);
         listOfPrimes[primesFoundSoFar] = currentNumber;
       }
+      /*for (int i=0; i < listOfPrimes.length; i++ ){
+    	  if ((listOfPrimes[i] % 5 == 0) && (listOfPrimes[i] != 5)) {
+    		  listOfPrimes[i] = 0;
+    	  }
+      }*/
     }
 
     public void printPrimes() {
