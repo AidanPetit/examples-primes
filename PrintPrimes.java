@@ -30,6 +30,10 @@ public class PrintPrimes {
       calculateOddPrimes();
   }
 
+ /* A do/while loop determines if a number is prime by keeping track of multiples
+  * and squares of the current number. When a number is known to be prime it is added 
+  * to the array listOfPrimes[]
+  */
   private void calculateOddPrimes() {
       boolean currentNumPrime;
       int N;
@@ -59,13 +63,12 @@ public class PrintPrimes {
         } while (!currentNumPrime);
         listOfPrimes[primesFoundSoFar] = currentNumber;
       }
-      /*for (int i=0; i < listOfPrimes.length; i++ ){
-    	  if ((listOfPrimes[i] % 5 == 0) && (listOfPrimes[i] != 5)) {
-    		  listOfPrimes[i] = 0;
-    	  }
-      }*/
     }
-
+  
+/* Print the calculated prime numbers in columns 50 primes with 4 columns per page.
+ *  The length of the lists are defined by the input rowsAcross and the number of columns 
+ *  per page is the value of columnsAcross. 
+ */
     public void printPrimes() {
         int PAGENUMBER = 1;
         int PAGEOFFSET = 1;
